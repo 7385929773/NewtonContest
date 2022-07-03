@@ -1,0 +1,55 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>JavaScript Form Validation</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Registration Form</h1>
+            <h3>Fillout all Mandatory Details</h3>
+            <form aciton="/myaction.php" name="myForm"  method="post">
+                <div class="formdesign" id="name">
+                    <label for="Name">Name</label><br>
+                    <input type="text" name="fname" autocomplete="off" required><br>
+                </div>
+
+                <div class="formdesign" id="email">
+                    <label for="Email">Email</label><br>
+                    <input type="email" name="femail" autocomplete="off" required><br>
+                    
+                </div>
+
+                <div class="formdesign" id="phone">
+                    <label for="phone">Phone</label><br>
+                    <input type="phone" name="fphone" autocomplete="off" required><br>
+                   
+                </div>
+
+                <div class="formdesign" id="pass">
+                    <label for="fpass">Password</label><br>
+                    <input type="password" id="psw" name="fpass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="*Password should be atleast 6 characters long! Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                        required>
+                   
+                </div>
+
+                <div class="formdesign" id="cpass">
+                    <label for="fcpass">Confirm Password</label><br>
+                    <input type="password" name="fcpass" autocomplete="off" required><br>
+                    
+                </div>
+
+                <input class="but" type="submit" value="Submit">
+            
+            </form>
+        </div>
+    </body>
+
+    </html>
+
